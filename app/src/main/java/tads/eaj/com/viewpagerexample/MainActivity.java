@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        ViewPager viewPager = findViewById(R.id.viewpager);
         viewPager.setAdapter(new PersonagemAdapter(this, Personagem.getListaPersonagem()));
         viewPager.addOnPageChangeListener(meulistener);
         //viewPager.setPageTransformer(true, new ZoomOutPageTransformer());

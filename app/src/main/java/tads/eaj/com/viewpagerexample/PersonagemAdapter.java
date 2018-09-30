@@ -12,6 +12,7 @@ import java.util.List;
 
 public class PersonagemAdapter extends PagerAdapter{
 
+
     Context context;
     List<Personagem> listaPersonagens;
 
@@ -24,13 +25,15 @@ public class PersonagemAdapter extends PagerAdapter{
     * Insctancia a próxima view que será exibida.
      */
 
+
     @Override
     public Object instantiateItem(ViewGroup container, int position){
         Log.i("AULA17", "chamou instantiateItem, posição = "+ position);
         View view = LayoutInflater.from(context).inflate(R.layout.item_personagem_inflater,container,false);
-        ImageView img = (ImageView) view.findViewById(R.id.imagemPersonagem);
+        ImageView img = view.findViewById(R.id.imagemPersonagem);
         img.setImageResource(listaPersonagens.get(position).getImagem());
         container.addView(view);
+
         return view;
     }
     /*
@@ -39,7 +42,7 @@ public class PersonagemAdapter extends PagerAdapter{
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object view){
-        Log.i("AULA14", "chamou destroyItem, posição = "+ position);
+        Log.i("AULA", "chamou destroyItem, posição = "+ position);
         container.removeView((View) view);
     }
     /*

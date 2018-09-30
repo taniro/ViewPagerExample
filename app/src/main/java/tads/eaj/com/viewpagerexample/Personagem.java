@@ -13,6 +13,7 @@ public class Personagem {
     }
 
     public static List<Personagem> getListaPersonagem(){
+
         List<Personagem> listaPersonagens = new ArrayList<Personagem>();
         listaPersonagens.add(new Personagem(R.drawable.img1, "Harry Potter"));
         listaPersonagens.add(new Personagem(R.drawable.img2, "Ronald Weasley"));
